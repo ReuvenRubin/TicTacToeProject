@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe AI</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    
+    <canvas id="confetti-canvas"></canvas>
+    <div id="ai-thinking">🤖 AI חושב...</div>
+
+    <div id="gameSettings">
+        <h2>Please adjust the rules below:</h2>
+        <label for="playerSymbol">Choose character: </label>
+        <select id="playerSymbol">
+            <option value="X">X</option>
+            <option value="O">O</option>
+        </select>
+        <br>
+        <label for="startingPlayer">Who goes first?</label>
+        <select id="startingPlayer">
+            <option value="player">I start first!</option>
+            <option value="ai">PC starts first!</option>
+        </select>
+        <br><br>
+        <button id="startGameButton" onclick="startGame()">Start Game!</button>
+    </div>
+
+    <div id="gameContainer">
+        <div id="gameBoard" style="margin-right: 20px;">
+            <div id="gameTimer">Time: 0s</div>
+            <canvas id="gameCanvas" width="300" height="300"></canvas>
+            <br>
+            <button id="resetButton" onclick="resetGame()">Restart Game!</button>
+        </div>
+        
+        <div id="moveHistory">
+            <h3>Move History</h3>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
